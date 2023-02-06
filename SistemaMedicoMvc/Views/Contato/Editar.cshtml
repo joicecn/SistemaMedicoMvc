@@ -1,0 +1,77 @@
+﻿@model PessoaModel
+
+@{
+    ViewData["Title"] = "Editar contato";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Editar Contato de Paciente</h1>
+
+</div>
+
+<form asp-controller="Contato" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do paciênte">
+    </div>
+
+    <div class="form-group">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="TelefoneTipo" class="form-label">Tipo de telefone de Contato</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Telefone ou celular?">
+    </div>
+
+
+    <div class="form-group">
+        <label for="ddd" class="form-label">DDD</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o DDD da sua operadora">
+    </div>
+
+    <div class="form-group">
+        <label for="numero" class="form-label">Numero de Contato</label>
+        <input type="text" asp-for="Telefone" class="form-control">
+    </div>
+
+    
+    <div class="form-group">
+        <label for="endereco2" class="form-label">Logradouro</label>
+        <input type="text" asp-for="Endereco" class="form-control" placeholder="Apartamento, casa, sítio...">
+    </div>
+        <div class="form-group">
+        <label for="endereco" class="form-label">Bairro</label>
+        <input type="text" asp-for="Endereco" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="numero" class="form-label">Numero</label>
+        <input type="text" asp-for="Endereco" class="form-control">
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" asp-for="Endereco" class="form-control">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" asp-for="Endereco" class="form-control">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" asp-for="Endereco" class="form-control">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Alterar</button>
+    <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+</form>
